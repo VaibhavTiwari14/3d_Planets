@@ -75,6 +75,7 @@ async function initScene() {
       "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/symmetrical_garden_02_1k.hdr",
       (texture) => {
         texture.mapping = THREE.EquirectangularReflectionMapping;
+        scene.environment = texture;
         resolve(texture);
       }
     );
